@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: shophome 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: shophome
+  template:
+    metadata:
+      labels:
+        app: shophome 
+    spec:
+      containers:
+        - name: shophome 
+          image: mykubeacrregmurtaja.azurecr.io/shophome
+          ports:
+          - containerPort: 80
