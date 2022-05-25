@@ -13,7 +13,7 @@ variables:
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: '29928612-f55c-4889-9de3-60e5ccfacaf2'
   imageRepository: 'shophome'
-  containerRegistry: 'mykubeacrregmurtaja.azurecr.io'
+  containerRegistry: '$(CONTAINERREGISTRY)'
   dockerfilePath: '**/Dockerfile'
   tag: '$(Build.BuildId)'
   imagePullSecret: 'mykubeacrregmurtajab0be-auth'
